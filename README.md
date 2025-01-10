@@ -141,8 +141,9 @@ For complete video visit : https://youtu.be/pHj8i_UcXSs
 This section presents the benchmarking results of the YOLOv5 models (YOLOv5n, YOLOv5s, and YOLOv5m) on various video files. The primary focus is on the inference speed, measured in frames per second (FPS), across different model configurations.
 
 ## System Architecture
-- **Hardware**: Benchmarks were conducted on a CPU-based system with an Intel Core i7-9700K processor and 16 GB RAM.
-- **Software**: Ubuntu 20.04 LTS, Python 3.8.20, PyTorch 2.4.1, YOLOv5 Version 2025-1-10.
+- **Hardware**: Benchmarks were conducted on a CPU-based system with an M2 Apple Chip on Macbook M2 AIR machine
+- **Software**:Python 3.13, PyTorch 2.4.1, YOLOv5 Version 2025-1-10.
+- **OS**: SenomaOS(MAC)
 
 ## Inference Speed Results
 | Video   | YOLOv5n FPS | YOLOv5s FPS | YOLOv5m FPS |
