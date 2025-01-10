@@ -144,3 +144,13 @@ This section presents the benchmarking results of the YOLOv5 models (YOLOv5n, YO
 # Benchmark
 
 ![benchmark](/assets/d7.png)
+
+
+
+# References
+
+- **YOLOv5 Documentation**: [YOLOv5 GitHub Repository](https://github.com/ultralytics/yolov5)
+- **PyTorch Documentation**: [PyTorch Official Website](https://pytorch.org/docs/stable/index.html)
+- **Conda Documentation**: [Conda Official Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
+- **Matplotlib Documentation**: [Matplotlib Official Website](https://matplotlib.org/stable/contents.html)
+- **Seaborn Documentation**: [Seaborn Official Website](https://seaborn.pydata.org/)
