@@ -26,6 +26,20 @@
 </div>
 <br />
 
+# Table of Contents
+
+- [Installation](#installation)
+  - [Environment Setup](#environment-setup)
+- [Workflow of Safetywhat Assessment (Pixeleye)](#workflow-of-safetywhat-assessment-pixeleye)
+  - [Execution Command](#execution-command)
+  - [Main Processing](#main-processing)
+- [Benchmarking Report](#benchmarking-report)
+  - [Introduction](#introduction)
+  - [System Architecture](#system-architecture)
+  - [Inference Speed Results](#inference-speed-results)
+  - [Optimization Strategies](#optimization-strategies)
+- [References](#references)
+
 # Installation
 ### Environment Setup
 
@@ -112,6 +126,8 @@ This diagram illustrates the workflow of the PixEye object detection system, hig
 ## See it in action
 
 ![demo_detection](/assets/d6.gif)
+
+For complete video visit : https://youtu.be/pHj8i_UcXSs
 > green boundry says object and blue says its respective subobject.
 
 # Benchmarking Report

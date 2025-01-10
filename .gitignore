@@ -2,7 +2,6 @@
 __pycache__/
 *.pyc
 
-DS_Store
 /pretrained_models/yolov8x.pt
 /pretrained_models/yolov5m.pt
 /pretrained_models/yolov5l.pt
@@ -16,7 +15,6 @@ DS_Store
 /data/v7.mp4
 /yolov5x.pt
 /yolov8x.pt
-/data/*
 /pretrained_models/*
 yolov5l.pt
 yolov5m.pt
@@ -24,3 +22,8 @@ yolov5x.pt
 yolov8x.pt
 yolov5s.pt
 yolov5n.pt
+
+data/.DS_Store
+assets/.DS_Store
+
+.DS_Store
