@@ -1,5 +1,5 @@
 <div align="center">
-    <h1> ASSESMENT </h1>
+    <h1> ASSESSMENT </h1>
     
 </div>
 
@@ -77,7 +77,7 @@ python -u "main.py" --video locat/test_video.mp4
 
 **Test Videos:** You can also download test videos from this drive_link.
 
-#### 3. Output you will get
+#### . Output you will get
 
 - **Interface**: Displays the processed video with detection overlays in a user interface.
 ![workflow](/assets/inf.png)
