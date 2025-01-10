@@ -75,7 +75,7 @@ python -u "main.py" --video locat/test_video.mp4
 - `--model`: YOLOv5 model type (`yolov5n`, `yolov5s`, `yolov5m`, `yolov5l`, `yolov5x`).
 > default model is `yolov5s`
 
-**Test Videos:** You can also download test videos from this drive_link.
+**Test Videos:** You can also download test videos from this drive_link: https://drive.google.com/drive/folders/1Dx4FlUM9ArTlSV0NUppw5rD8hBlZIPTy?usp=sharing
 
 #### . Output you will get
 
