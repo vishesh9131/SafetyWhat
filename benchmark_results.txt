@@ -1,0 +1,230 @@
+Processed 749 frames in 21.33 seconds.
+Average FPS: 35.12
+Model: yolov5n
+Video: data/v.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 479 frames in 13.39 seconds.
+Average FPS: 35.76
+Model: yolov5n
+Video: data/v3.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 397 frames in 12.25 seconds.
+Average FPS: 32.41
+Model: yolov5n
+Video: data/v2.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 420 frames in 11.81 seconds.
+Average FPS: 35.55
+Model: yolov5n
+Video: data/v4.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 410 frames in 12.22 seconds.
+Average FPS: 33.56
+Model: yolov5n
+Video: data/v6.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 200 frames in 5.25 seconds.
+Average FPS: 38.06
+Model: yolov5n
+Video: data/v7.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 300 frames in 9.04 seconds.
+Average FPS: 33.19
+Model: yolov5n
+Video: data/v8.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 749 frames in 37.72 seconds.
+Average FPS: 19.86
+Model: yolov5s
+Video: data/v.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 479 frames in 22.61 seconds.
+Average FPS: 21.19
+Model: yolov5s
+Video: data/v3.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 397 frames in 20.31 seconds.
+Average FPS: 19.55
+Model: yolov5s
+Video: data/v2.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 420 frames in 21.11 seconds.
+Average FPS: 19.89
+Model: yolov5s
+Video: data/v4.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 410 frames in 20.28 seconds.
+Average FPS: 20.21
+Model: yolov5s
+Video: data/v6.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 200 frames in 9.84 seconds.
+Average FPS: 20.32
+Model: yolov5s
+Video: data/v7.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 300 frames in 14.80 seconds.
+Average FPS: 20.27
+Model: yolov5s
+Video: data/v8.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 749 frames in 71.97 seconds.
+Average FPS: 10.41
+Model: yolov5m
+Video: data/v.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 479 frames in 52.06 seconds.
+Average FPS: 9.20
+Model: yolov5m
+Video: data/v3.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 397 frames in 39.75 seconds.
+Average FPS: 9.99
+Model: yolov5m
+Video: data/v2.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 420 frames in 40.01 seconds.
+Average FPS: 10.50
+Model: yolov5m
+Video: data/v4.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 410 frames in 40.20 seconds.
+Average FPS: 10.20
+Model: yolov5m
+Video: data/v6.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 200 frames in 17.91 seconds.
+Average FPS: 11.17
+Model: yolov5m
+Video: data/v7.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 300 frames in 29.66 seconds.
+Average FPS: 10.11
+Model: yolov5m
+Video: data/v8.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 749 frames in 124.40 seconds.
+Average FPS: 6.02
+Model: yolov5l
+Video: data/v.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------
+Processed 479 frames in 76.68 seconds.
+Average FPS: 6.25
+Model: yolov5l
+Video: data/v3.mp4
+Confidence Threshold: 0.3
+IoU Threshold: 0.3
+Max Detections: 100
+Image Size: 640
+Frame Skip: 1
+--------------------------------------------------

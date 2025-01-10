@@ -1,18 +1,10 @@
 <div align="center">
-    <h1> ASSESMENT </h1>
-    
-</div>
-
-<div align="center">
     <h1>Proposed name : Pixeleye</h1>
-    
 </div>
-
 
 <div align="center">
 
-
-<b>Assesment Given By : Safetywhat </b>
+<b>Assessment Given By : Safetywhat </b>
 
 <b>Submitted By: Vishesh Yadav </b>
 
@@ -21,8 +13,6 @@
 <b>Degree: MCA hons AI & ML</b>
 
 <b>Project Name: Pixeleye </b>
-
-
 </div>
 <br />
 
@@ -37,20 +27,17 @@ conda activate safewt-asses
 ```
 
 #### 2. Install Dependencies
-
 Install the required dependencies using pip:
 ```bash
 pip install -r requirements.txt
 ```
 
 #### 3. Run the Code
-
 ```bash
 python -u "main.py" --video locat/test_video.mp4
 ```
 
 **Configurations:**
-
 - `--webcam`: Use webcam for real-time detection.
 - `--video`: Path to input video (default: `v.mp4`).
 - `--conf-threshold`: Confidence threshold for detections (default: `0.3`).
@@ -64,7 +51,6 @@ python -u "main.py" --video locat/test_video.mp4
 **Test Videos:** You can also download test videos from this drive_link.
 
 #### 3. Output you will get
-
 - **Interface**: Displays the processed video with detection overlays in a user interface.
 ![workflow](/assets/inf.png)
 > **Note**: This Output used yolov5s model (FPS: 13-25)
@@ -77,14 +63,12 @@ python -u "main.py" --video locat/test_video.mp4
 - **formatted_terminal**: Outputs formatted detection information to the terminal for real-time monitoring.
 ![workflow](/assets/json.png)
 
-
-# Workflow of Safetywhat Assessment (pixeleye)
+# Workflow of Safetywhat Assessment (Pixeleye)
 ![workflow](/assets/d1.jpg)
 
 This diagram illustrates the workflow of the PixEye object detection system, highlighting the interaction between various components and the flow of data from input to output.
 
 ## Execution Command
-
 - **User Input**: The process begins with the user executing a command in the terminal:
   ```bash
   python -u "main.py" --video data/v3.mp4 --model yolov5n
@@ -92,15 +76,12 @@ This diagram illustrates the workflow of the PixEye object detection system, hig
   This command specifies the video file to be processed and the model to be used for detection.
 
 ## Main Processing
-
 - **main.py**: Acts as the central hub, orchestrating the workflow. It initializes the model, processes video frames, and coordinates with other modules.
 
 ### Data Input
-
 - **/data (sample_videos)**: Contains the video files to be processed. The specified video is loaded and passed to `main.py`.
 
 ### Processing Modules
-
 - **image_retriever.py**: Handles saving cropped images of detected subobjects.
 - **json_utils.py**: Formats and saves detection results in JSON format.
 - **helper.py**: Sets up the environment and displays the application banner.
@@ -110,9 +91,9 @@ This diagram illustrates the workflow of the PixEye object detection system, hig
 - **mapper.py**: Provides mappings for subobject detection.
 
 ## See it in action
+![demo_detection](https://via.placeholder.com/800x400.png?text=Demo+Image)
 
-![demo_detection](/assets/d6.gif)
-> green boundry says object and blue says its respective subobject.
+Visit [PixEye Live](https://app.pixeye.dev) to see it in action.
 
 # Benchmarking Report
 
@@ -138,9 +119,8 @@ This section presents the benchmarking results of the YOLOv5 models (YOLOv5n, YO
 - **Model Pruning**: Reduce parameters and layers.
 - **Quantization**: Convert weights to integer.
 - **Batch Processing**: Process multiple frames simultaneously.
-- **Hardware Acceleration**: Use GPUs or TPUs (in this project used cpu as per requirement)
+- **Hardware Acceleration**: Use GPUs or TPUs.
 - **Efficient Data Loading**: Optimize data loading and preprocessing.
 
 # Benchmark
-
-![benchmark](/assets/d7.png)
+![benchmark](https://via.placeholder.com/800x400.png?text=Demo+Image)

@@ -13,6 +13,7 @@ import warnings
 import sys
 import time
 
+
 def save_detections_json(detections, frame_number, output_dir='.'):
     """Save detections in JSON format"""
     if not os.path.exists(output_dir):
@@ -78,12 +79,11 @@ def main(use_webcam=False, conf_threshold=0.3, iou_threshold=0.3, max_det=100, i
     
     model = initialize_model(args.conf_threshold, args.iou_threshold, args.max_det, args.img_size, args.model)
     
-    # Initialize variables before the video loop
     frame_count = 0
     prev_time = time.time()
     fps = 0
     
-    cap = cv2.VideoCapture(args.video if not args.webcam else 1)
+    cap = cv2.VideoCapture(args.video if not args.webcam else 0)
     if not cap.isOpened():
         print("Error: Could not open video source.")
         return
@@ -114,22 +114,18 @@ def main(use_webcam=False, conf_threshold=0.3, iou_threshold=0.3, max_det=100, i
         with open(output_file, 'w') as f:
             json.dump(json_data, f, indent=4)
 
-    def draw_label_with_background(frame, text, position, font_scale=0.5, thickness=2, font=cv2.FONT_HERSHEY_SIMPLEX):
+    def draw_label_with_background(frame, text, position, font_scale=3, thickness=6, font=cv2.FONT_HERSHEY_SIMPLEX):
         """Draw text with filled background"""
-        # Get text size
         (text_width, text_height), baseline = cv2.getTextSize(text, font, font_scale, thickness)
         
-        # Calculate background rectangle coordinates
         x, y = position
         background_coords = (
             (x, y - text_height - baseline),
             (x + text_width, y + baseline)
         )
         
-        # Draw background rectangle
         cv2.rectangle(frame, background_coords[0], background_coords[1], (0, 0, 0), -1)
         
-        # Draw text
         cv2.putText(frame, text, (x, y), font, font_scale, (255, 255, 255), thickness)
 
     while cap.isOpened():
@@ -139,22 +135,18 @@ def main(use_webcam=False, conf_threshold=0.3, iou_threshold=0.3, max_det=100, i
                 print("\n\033[93m[System]\033[0m End of video or frame read error")
                 break
 
-            # Skip frames to increase FPS
             if frame_count % frame_skip != 0:
                 frame_count += 1
                 continue
 
-            # Calculate FPS
             current_time = time.time()
             if current_time - prev_time >= 1.0:
                 fps = frame_count
                 frame_count = 0
                 prev_time = current_time
 
-            # Process frame
             results = model(frame)
             
-            # Convert results to proper format
             detections = []
             for *xyxy, conf, cls in results.xyxy[0]:
                 detection = {
@@ -167,46 +159,39 @@ def main(use_webcam=False, conf_threshold=0.3, iou_threshold=0.3, max_det=100, i
                 }
                 detections.append(detection)
             
-            # Process detections to find subobjects
             processed_detections = process_detections_fast(detections, SUBOBJECTS_MAP)
             
-            # Save detections to JSON every 30 frames
             if frame_count % 30 == 0:
                 save_detections_json(processed_detections, frame_count)
             
-            # Save subobject images
             save_subobject_images(frame, processed_detections)
             
-            # Display results
             print_detection_info(processed_detections)
             
-            # Draw FPS on frame
-            draw_label_with_background(frame, f"FPS: {fps}", (10, 30))
+            draw_label_with_background(frame, f"FPS: {fps}", (10, 90),2)
             
-            # Draw detections on frame
             for det in processed_detections:
-                # Draw main object
                 x1, y1, x2, y2 = map(int, det['bbox'])
-                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 8)
                 
-                # Draw main object label with background
                 label = f"{det['object']} {det['confidence']:.2f}"
                 draw_label_with_background(frame, label, (x1, y1-10))
                 
-                # Draw subobjects
                 for sub in det.get('subobjects', []):
                     x1, y1, x2, y2 = map(int, sub['bbox'])
-                    cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 8)
                     
-                    # Draw subobject label with background
                     sub_label = f"{sub['object']} {sub['confidence']:.2f}"
                     draw_label_with_background(frame, sub_label, (x1, y1-10))
             
-            # Show frame
-            cv2.imshow('SAFETYWHAT ASSESSMENT', frame)
+
             
             frame_count += 1
-            
+            frame = cv2.resize(frame, (640, 360))                     
+            cv2.imshow('SAFETYWHAT ASSESSMENT', frame)                
+            cv2.namedWindow('SAFETYWHAT ASSESSMENT', cv2.WINDOW_NORMAL) 
+
+
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
                 
@@ -214,7 +199,6 @@ def main(use_webcam=False, conf_threshold=0.3, iou_threshold=0.3, max_det=100, i
             print(f"\n\033[91m[System]\033[0m Error: {str(e)}")
             continue
 
-    # Cleanup
     cap.release()
     cv2.destroyAllWindows()
     merge_and_cleanup_json_files()
